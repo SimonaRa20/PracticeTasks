@@ -48,6 +48,7 @@ namespace Activity3
         /// <returns></returns>
         public virtual bool Enqueue(T next)
         {
+            #region Activity 3.0
             if (next == null)
                 throw new ArgumentNullException();
 
@@ -58,6 +59,7 @@ namespace Activity3
             last = (last + 1) % base.Capacity;
             Count++;
             return true;
+            #endregion
         }
 
         /// <summary>
@@ -66,6 +68,7 @@ namespace Activity3
         /// <returns></returns>
         public virtual T Dequeue()
         {
+            #region Activity 3.1
             if (Count == 0)
                 throw new InvalidOperationException();
 
@@ -74,6 +77,7 @@ namespace Activity3
             first = (first + 1) % base.Capacity;
             Count--;
             return removedItem;
+            #endregion
         }
 
         /// <summary>
@@ -97,6 +101,7 @@ namespace Activity3
         /// <returns></returns>
         public override int IndexOf(T arg)
         {
+            #region Activity 3.2
             if (arg == null)
                 throw new ArgumentNullException();
 
@@ -108,6 +113,7 @@ namespace Activity3
             }
 
             return NOT_IN_STRUCTURE;
+            #endregion
         }
 
         /// <summary>
@@ -117,11 +123,13 @@ namespace Activity3
         /// <returns>the object for the specified index</returns>
         public T Check(int index)
         {
+            #region Activity 3.3
             if (index < 0 || index >= Count)
                 throw new IndexOutOfRangeException();
 
             int arrayIndex = (first + index) % base.Capacity;
             return base[arrayIndex];
+            #endregion
         }
     }
 }

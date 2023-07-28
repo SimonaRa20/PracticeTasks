@@ -34,6 +34,7 @@ namespace Activity2
         /// <returns></returns>
         public virtual void Push(T arg)
         {
+            #region Activity 2.5
             if (IsFull())
             {
                 throw new InvalidOperationException("Stack is full. Cannot push more items.");
@@ -46,6 +47,7 @@ namespace Activity2
 
             this[Count] = arg;
             Count++;
+            #endregion
         }
 
         /// <summary>
@@ -54,6 +56,7 @@ namespace Activity2
         /// <returns>current count of the data store</returns>
         public virtual T Pop()
         {
+            #region Activity 2.6
             if (IsEmpty())
             {
                 throw new InvalidOperationException("Stack is empty. Cannot pop an item.");
@@ -64,6 +67,7 @@ namespace Activity2
             this[Count] = default;
 
             return topItem;
+            #endregion
         }
 
         /// <summary>
@@ -72,12 +76,14 @@ namespace Activity2
         /// <returns></returns>
         public virtual T Peek()
         {
+            #region Activity 2.7
             if (IsEmpty())
             {
                 throw new InvalidOperationException("Stack is empty. Cannot peek.");
             }
 
             return this[Count - 1];
+            #endregion
         }
     }
 }

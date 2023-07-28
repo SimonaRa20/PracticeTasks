@@ -52,12 +52,7 @@ namespace Activity2
         /// <param name="arraySize">Size for which the array has to be initialized</param>
         public ArrayBase(int arraySize = DEFAULT_SIZE)
         {
-            // TODO Activity 2.1
-            // Initialize the array 'storeArray' that can hold a number of items
-            // specified by 'arraySize'.
-            // If the value of 'arraySize' is illegal for an array,
-            // then use DEFAULT_SIZE instead.
-
+            #region Activity 2.1
             int actualSize = 0;
             if (arraySize > 0)
             {
@@ -69,6 +64,7 @@ namespace Activity2
             }
 
             storeArray = new T[actualSize];
+            #endregion
         }
 
         /// <summary>
@@ -131,19 +127,7 @@ namespace Activity2
         /// </returns>
         public virtual int IndexOf(T argToFind)
         {
-            //TODO Activity 2.2
-            //Search through the current contents of the array 'storeArray' and determine if there is any item
-            //in the array that is equal to 'argToFind' according to Equals() method. Return the index where that
-            //item is located or NOT_IN_STRUCTURE, if the item is not within
-            //the array.
-            //Loop through the array
-            //HINT: All items have a method named Equals() that returns a boolean.
-            //Example: This tests if obj1 is "Equal to" obj2
-            // if (obj1.Equals(obj2))
-            // {
-            //    :::
-            // }
-
+            #region Activity 2.2
             for (int i = 0; i < Count; i++)
             {
                 if (Equals(storeArray[i], argToFind))
@@ -152,6 +136,7 @@ namespace Activity2
                 }
             }
             return NOT_IN_STRUCTURE;
+            #endregion
         }
 
         /// <summary>
@@ -161,6 +146,7 @@ namespace Activity2
         /// <returns>Returns NOT_IN_STRUCTURE if array is full, or added item index if addition succeeded.</returns>
         public virtual int Add(T obj)
         {
+            #region Activity 2.3
             if (IsFull())
             {
                 return NOT_IN_STRUCTURE;
@@ -169,6 +155,7 @@ namespace Activity2
             storeArray[Count] = obj;
             Count++;
             return Count - 1;
+            #endregion
         }
 
         /// <summary>
@@ -178,6 +165,7 @@ namespace Activity2
         /// <returns>Throws InvalidOperationException if removal is not possible.</returns>
         public virtual void RemoveAt(int index)
         {
+            #region Activity 2.4
             if (IsEmpty())
             {
                 throw new InvalidOperationException("Array is empty. Impossible to remove.");
@@ -197,6 +185,7 @@ namespace Activity2
             }
 
             Count--;
+            #endregion
         }
     }
 }
