@@ -9,22 +9,20 @@ namespace Activity5
 {
     public class CardPlayer : PlayerProfile
     {
-        private int v;
-
-        public CardPlayer(string name, char gender, DateTime birthDate) : base(name, gender, birthDate)
-        {
-        }
-
-        public CardPlayer(string name, char gender, DateTime birthDate, int v) : this(name, gender, birthDate)
-        {
-            this.v = v;
-        }
-
         public int CardCount { get; set; }
         public int MaxSize { get; set; }
 
+        public CardPlayer(string name, char gender, DateTime birthDate, int v) : base(name, gender, birthDate)
+        {
+
+        }
+
         public bool AddCard(SimpleCard simpleCard)
         {
+            if (simpleCard == null)
+            {
+                throw new ArgumentNullException();
+            }
             throw new NotImplementedException();
         }
 

@@ -12,7 +12,7 @@ namespace Activity5
 
         public string GetCardAttribute()
         {
-            throw new NotImplementedException();
+            return CardAttribute.ToString();
         }
     }
 }

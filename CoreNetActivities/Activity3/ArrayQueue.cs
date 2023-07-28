@@ -55,6 +55,9 @@ namespace Activity3
             if (IsFull())
                 return false;
 
+            if (Count == base.Capacity)
+                return false;
+
             base[last] = next;
             last = (last + 1) % base.Capacity;
             Count++;
