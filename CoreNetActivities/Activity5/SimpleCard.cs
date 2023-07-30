@@ -12,7 +12,7 @@ namespace Activity5
 
         public string GetCardAttribute()
         {
-            return CardAttribute.ToString();
+            return string.Concat("Card ", CardAttribute.ToString());
         }
     }
 }

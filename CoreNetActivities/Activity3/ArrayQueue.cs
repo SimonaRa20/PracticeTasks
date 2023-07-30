@@ -1,4 +1,5 @@
 using Activity2;
+using System.Drawing;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Activity3
@@ -50,13 +51,14 @@ namespace Activity3
         {
             #region Activity 3.0
             if (next == null)
+            {
                 throw new ArgumentNullException();
+            }
 
-            if (IsFull())
+            if (IsFull() || IndexOf(next) != NOT_IN_STRUCTURE)
+            {
                 return false;
-
-            if (Count == base.Capacity)
-                return false;
+            }
 
             base[last] = next;
             last = (last + 1) % base.Capacity;
@@ -73,7 +75,9 @@ namespace Activity3
         {
             #region Activity 3.1
             if (Count == 0)
+            {
                 throw new InvalidOperationException();
+            }
 
             T removedItem = base[first];
             base[first] = default(T);
@@ -106,7 +110,9 @@ namespace Activity3
         {
             #region Activity 3.2
             if (arg == null)
+            {
                 throw new ArgumentNullException();
+            }
 
             for (int i = 0; i < Count; i++)
             {
