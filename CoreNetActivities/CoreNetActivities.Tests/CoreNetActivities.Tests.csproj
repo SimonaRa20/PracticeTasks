@@ -22,7 +22,10 @@
     <ProjectReference Include="..\Activity3\Activity3.csproj" />
     <ProjectReference Include="..\Activity4\Activity4.csproj" />
     <ProjectReference Include="..\Activity5\Activity5.csproj" />
+    <ProjectReference Include="..\Activity6\Activity6.csproj" />
     <ProjectReference Include="..\Activity7\Activity7.csproj" />
+    <ProjectReference Include="..\Activity8\Activity8.csproj" />
+    <ProjectReference Include="..\TrainEvents\TrainEvents.csproj" />
   </ItemGroup>
 
 </Project>
