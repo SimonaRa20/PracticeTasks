@@ -118,7 +118,9 @@ namespace Activity3
             {
                 int index = (first + i) % base.Capacity;
                 if (base[index].Equals(arg))
+                {
                     return i;
+                }
             }
 
             return NOT_IN_STRUCTURE;
