@@ -12,7 +12,7 @@ namespace MovieApp.Data
         {
             movies = new List<Movie>()
             {
-                new Movie { Id = 1, ReleaseYear = "2006", Title = "Very Real Movie", Genre = Genre.Comedy },
+                new Movie { Id = 1, ReleaseYear = "2006", Title = "Very Real Movie", Genre = Genre.Comedy, ShortDescription = "Description" },
                 new Movie { Id = 2, ReleaseYear = "2020", Title = "Very Real Movie 2", Genre = Genre.Tragedy },
                 new Movie { Id = 3, ShortDescription = "Just your typical romance.", Title = "Something, something Love", Genre = Genre.Romance },
                 new Movie { Id = 4, Title = ".gitignore: The Movie", Genre = Genre.Horror }

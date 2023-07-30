@@ -31,7 +31,7 @@ namespace MovieApp.Services
             var movie = _db.FindByCondition(x => x.Id == id);
             if (movie.Any())
             {
-                Map(movie.First());
+                return Map(movie.First());
             }
 
             return null;
